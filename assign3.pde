@@ -92,8 +92,8 @@ void RunDraw()
     if(hogX<0){
       hogX=0;
    }
-   if(hogY>1840){
-    hogY=1840;
+   if(hogY>2000){
+    hogY=2000;
   }
   if(hogY<80){
     hogY=80;
@@ -198,10 +198,10 @@ void draw() {
     int downcam = 0;
     
     
-    if(hogY<=1520){
+    if(hogY<=1680){
       downcam = hogY;
     }else {
-      downcam = 1520;
+      downcam = 1680;
     }
     
     translate(0, -downcam+80);
@@ -212,7 +212,7 @@ void draw() {
 	    stroke(255,255,0);
 	    strokeWeight(5);
 	    fill(253,184,19);
-	    ellipse(590,50,120,120);
+	    ellipse(590,50-80+downcam,120,120);
 
 		// Grass
 		fill(124, 204, 25);
